@@ -9,15 +9,14 @@ public class ParOuImpar {
 
         System.out.println("Informe um número inteiro");
         int numero = scanner.nextInt();
-        System.out.println(poi.ParOuImpar(numero));
+        poi.parOuImpar(numero);
     }
 
-    public int ParOuImpar(int numero){
-        if(numero % 2 == 0){
-             System.out.println("Par");
-        }  else {
+    public void parOuImpar(int numero) {
+        if (numero % 2 == 0) {
+            System.out.println("Par");
+        } else {
             System.out.println("Impar");
-        } return numero;
+        }
     }
-
 }
