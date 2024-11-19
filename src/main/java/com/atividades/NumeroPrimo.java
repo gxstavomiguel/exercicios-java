@@ -9,22 +9,28 @@ public class NumeroPrimo {
 
         System.out.println("Informe o número: ");
         int numero = scanner.nextInt();
-        nm.verificarNumeroPrimo(numero);
-    }
-
-    public void verificarNumeroPrimo(int num) {
-        if (num > 1) {
-            if (num == 2 || num%2==1){
-                if(num%5!=0){
-                   if(num%3!=0){
-                       if(num%7!=0){
-                           System.out.println("É primo");
-                       }
-                   }
-                }
-            }else {
-                System.out.println("Não é primo");
-            }
+        if(verificarNumeroPrimo(numero)){
+            System.out.println("É primo");
+        } else {
+            System.out.println("Não é primo");
         }
     }
+
+    public static boolean verificarNumeroPrimo(int num) {
+        if(num <= 1){
+            return false;
+        }
+        if (num == 2){
+            return true;
+        }
+        if(num % 2 == 0){
+            return false;
+        }
+        for(int i = 3; i <= Math.sqrt(num); i +=2){
+            if(num % i == 0){
+                return false;
+            }
+        } return true;
+    }
 }
+
