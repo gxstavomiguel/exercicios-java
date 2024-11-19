@@ -3,6 +3,7 @@ package com.atividades;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Não é o algoritmo bubblesort original
 public class BubbleSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
