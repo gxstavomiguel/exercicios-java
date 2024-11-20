@@ -35,4 +35,13 @@ public class Carro {
     public void setAno(String ano) {
         this.ano = ano;
     }
+
+    public static void main(String[] args) {
+        Carro carro = new Carro("renault", "sandero", "2016");
+        carro.exibirInformacoes();
+    }
+
+    public void exibirInformacoes(){
+        System.out.println(getMarca() + " " + getModelo() + " " + getAno());
+    }
 }
